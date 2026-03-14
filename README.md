@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# English Grammar Master - Vercel Deployment Guide
 
-# Run and deploy your AI Studio app
+本项目是一个基于 Vite + React 的单页应用 (SPA)，可以轻松部署到 Vercel。
 
-This contains everything you need to run your app locally.
+## 部署步骤
 
-View your app in AI Studio: https://ai.studio/apps/ce981afd-b11d-4cd1-9c0c-c441d7fafbf9
+1. **导出代码**：
+   - 在 AI Studio 中点击 **Settings** -> **Export to GitHub**。
+   - 或者下载 ZIP 并上传到您的 GitHub 仓库。
 
-## Run Locally
+2. **在 Vercel 中导入**：
+   - 登录 [Vercel](https://vercel.com)。
+   - 点击 **New Project**。
+   - 选择您的 GitHub 仓库。
 
-**Prerequisites:**  Node.js
+3. **配置环境变量**：
+   - 在 Vercel 的项目设置中，添加以下环境变量：
+     - `GEMINI_API_KEY`: 您的 Google AI API Key（如果应用中有使用 AI 功能）。
 
+4. **构建设置**：
+   - Framework Preset: `Vite`
+   - Build Command: `npm run build`
+   - Output Directory: `dist`
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+5. **点击 Deploy**。
+
+## 本地开发
+
+```bash
+npm install
+npm run dev
+```
